@@ -1,6 +1,7 @@
 #!/bin/bash
+
+# This should be a patch
 perl -pi -e "s#CMAKE_CXX_STANDARD\s+\d+#CMAKE_CXX_STANDARD 17#g" CMakeLists.txt 
-#patch < ~/projects/xalan-c-feedstock/patches/dead_code_patch.patch
 
 mkdir build && cd build
 cmake -D CMAKE_BUILD_TYPE=Release\
