@@ -1,16 +1,7 @@
 #!/bin/bash
-
-export XERCESCROOT=${PREFIX}
-export XALANCROOT=${SRC_DIR}
-
-if [[ ${target_platform} == osx-64 ]]; then
-    platform=macosx
-else
-    platform=linux
-    export CXXCPP=${CPP}
-fi
-
-./runConfigure -p ${platform} -c $CC -x $CXX -b 64 -P ${PREFIX}
-
-make
-make install
+mkdir build && cd build
+cmake -D CMAKE_BUILD_TYPE=Release\
+  -D CMAKE_INSTALL_PREFIX=$PREFIX\
+  -D CMAKE_PREFIX_PATH=$PREFIX \
+  $SRC_DIR
+make -j $CPU_COUNT install
