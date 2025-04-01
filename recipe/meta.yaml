@@ -22,9 +22,10 @@ requirements:
     - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  
+
   host:
-    - xerces-c >=3
+    - xerces-c 3.2.4
+    - python 3.10.13
 
 test:
   commands:
