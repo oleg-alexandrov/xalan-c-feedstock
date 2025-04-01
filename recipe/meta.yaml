@@ -8,7 +8,7 @@ package:
 source:
   # xalan lib uses <major>_<minor> in links instead of <major>.<minor>
   url: https://github.com/apache/xalan-c/archive/Xalan-C_{{ version|replace(".","_") }}_0.tar.gz
-  sha256: 50bb8107c41c9e65410371e1272c66cb49531b9a3b2a55ccb62ad57dd3a35a4d
+  sha256: f3d4f23af7f7914259f2f5dbd9cc1450d3ebe0b8c8163fd50fcac4a39c63fccd
 
 build:
   skip: True  # [win]
