@@ -14,7 +14,7 @@ source:
 
 build:
   skip: True  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -24,8 +24,8 @@ requirements:
     - {{ compiler('cxx') }}
 
   host:
-    - xerces-c 3.2.4
-    - python 3.10.13
+    - xerces-c 3.2.5
+    - python 3.11.12
 
 test:
   commands:
